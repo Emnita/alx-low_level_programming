@@ -1,17 +1,15 @@
 #include <stdio.h>
+
 /**
  * main - Entry point
- *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-int r;
+	int num;
 
-for (r = 0; r <= 9; r++)
-{
-printf("%d", r);
-}
-printf("\n");
-return (0);
+	for (num = 0; num < 10; num++)
+		printf("%d", num);
+	putchar('\n');
+	return (0);
 }

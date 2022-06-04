@@ -1,39 +1,42 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - program that prints all possible different combinations
+ * of thress digits.
  *
- * Return: Always 0 (Success)
+ * Return: 0
  */
 int main(void)
 {
-int x, y, z;
+	int i;
+	int n;
+	int j;
 
-for (x = 48; x <= 57; x++)
-{
-for (y = 48; y <= 57; y++)
-{
-for (z = 48; z <= 57; z++)
-{
-if (x == y || x == z || y == z || y <= x || z <= y)
-{
-}
-else
-{
-putchar(x);
-putchar(y);
-putchar(z);
-if (x == 55 && y == 56 && z == 57)
-{
-}
-else
-{
-putchar(44);
-putchar(' ');
-}
-}
-}
-}
-}
-putchar('\n');
-return (0);
+	for (i = 48; i < 58; i++)
+	{
+		for (n = 48; n < 58; n++)
+		{
+			if (n > i)
+			{
+				for (j = 48; j < 58; j++)
+				{
+					if (j > n)
+					{
+					putchar(i);
+					putchar(n);
+					putchar(j);
+					if (i == 55 && n == 56 && j == 57)
+					{
+						break;
+					}
+
+					putchar(',');
+					putchar(' ');
+					}
+				}
+			}
+		}
+	}
+
+	putchar('\n');
+	return (0);
 }
